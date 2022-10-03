@@ -2,6 +2,7 @@
 
 Convert PKCS12/.p12-files into pem key and pem certificate.
 
+Don't strip off \r\n
 
 
 **Table of contents:**
@@ -18,7 +19,7 @@ Convert PKCS12/.p12-files into pem key and pem certificate.
 ### Installing the library
 
 ```bash
-npm install p12-pem --save
+npm install git+https://github.com/fprijate/p12-pem
 ```
 
 

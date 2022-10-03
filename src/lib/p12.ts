@@ -23,7 +23,7 @@ function getKeyFromP12(p12: any, password: string) {
   }
 
   let pemKey = forge.pki.privateKeyToPem(pkcs8Key.key);
-  pemKey = pemKey.replace(/\r\n/g, '');
+  //pemKey = pemKey.replace(/\r\n/g, '');
 
   return pemKey;
 }
@@ -33,7 +33,7 @@ function getCertificateFromP12(p12: any) {
   const certificate = certData[forge.pki.oids.certBag][0];
 
   let pemCertificate = forge.pki.certificateToPem(certificate.cert);
-  pemCertificate = pemCertificate.replace(/\r\n/g, '');
+  //pemCertificate = pemCertificate.replace(/\r\n/g, '');
   const commonName = certificate.cert.subject.attributes[0].value;
   return { pemCertificate, commonName };
 }
